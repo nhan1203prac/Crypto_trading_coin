@@ -1,0 +1,17 @@
+package com.crypto.treading.Untils;
+
+import java.util.Random;
+
+public class OtpUntil {
+	public static String generateOtp() {
+		int otpLength = 6;
+		Random random = new Random();
+		
+		StringBuilder otp = new StringBuilder();
+		
+		for(int i=1;i <= otpLength;i++) {
+			otp.append(random.nextInt(10));
+		}
+		return otp.toString();
+	}
+}
